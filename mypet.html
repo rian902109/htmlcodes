@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <style>
+            body {
+
+font-family: Arial, sans-serif;
+
+border-color: color-mix(in lab, yellow 50, gold 50);
+
+background:linear-gradient(to bottom lightyellow,gold,rgb(93, 84, 34));
+
+background-repeat: no-repeat;
+
+ padding: 65px 30px 30px 30px;
+
+min-height: 1800px;
+
+}
+
+h1, h2 { color: darkorange; }
+
+.topbar {
+
+position: fixed;
+
+top: 0;
+
+left: 0;
+
+right: 0;
+
+background-color: darkorange;
+
+color: white;
+
+padding: 14px 20px;
+
+}
+
+.listitem {
+
+background-color: white;
+
+border: 2px solid darkorange;
+
+padding: 10px 20px;
+
+margin: 5px 0;
+
+}
+
+.special-note {
+
+position: relative;
+
+left: 30px;
+
+background-color: gold;
+
+padding: 10px 20px;
+
+}
+
+.petcard {
+
+position: relative;
+
+background-color: white;
+
+border: 3px solid darkorange;
+
+padding: 15px 25px;
+
+}
+
+.badge {
+
+position: absolute;
+
+top: 8px;
+
+right: 8px;
+
+background-color: forestgreen;
+
+color: white;
+
+padding: 4px 8px;
+
+}
+
+.lbl {
+
+position: sticky;
+
+top: 55px;
+
+background-color: darkorange;
+
+color: white;
+
+padding: 10px 20px;
+
+margin: 15px 0 8px;
+
+}
+
+        </style>
+    </head>
+
+    <body>
+        <div class="topbar">My Pet - Loki The Golden Retriever</div>
+        <h1>Meet LOKI</h1>
+
+        <h2>static</h2>
+        <div class="listitem">Breed: Golden Retriever</div>
+        <div class="listitem">Age : 3years old</div>
+
+        <h2>relative</h2>
+        <p>This note shifts from its normal spot</p>
+        <div class="specialnote">pet of the month</div>
+
+        <h2>absolute</h2>
+        <p>the badge is pinned to the conner of the card</p>
+        <div class="petcard">
+            <p>loki- golden Retriever,3years<div >
+                <div class="badge">adopted</div>
+        </div>
+
+        <h2>sticky</h2>
+        <p>scroll down - the lable locks at the top</p>
+         <div class="lbl">more pets</div>
+         <div class="listitem">rocky -german shepard,4months</div>
+         <div class="listitem">ruby -dalmination,1year</div>
+         <div class="listitem">bella -beagle,11months</div>
+         <div class="listitem">thunder -husky,1½years</div>
+
+
+    </body>
+</html>
