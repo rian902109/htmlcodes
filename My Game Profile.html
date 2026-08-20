@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>My Game Profile</h1>
+        <button onclick="showProfile()">Show Profile</button>
+        <div>Name: <span id="name"></span></div>
+        <div>Score: <span id="score"></span></div>          <div>Name <span id="name"></span></div>
+        <div>Top score: <span id="record"></span></div>
+        <div>Rank: <span id="rank"></span></div>
+        <div>Greetings: <span id="greetings"></span></div>
+        <div>Stars: <span id="stars"></span></div>
+        <script>
+            function showProfile() {
+                let name = "Alex";
+                let myScore = 75;
+                let highScore = 100;
+                let bonus = null;
+                let team;
+
+                let isTopScore = score == highScore;
+
+                let rank;
+                if (myScore >= 80) {
+                    rank = "Gold";
+                } else if (myScore >= 50) {
+                    rank= "Silver";
+                } else {
+                    rank= "Bronze";
+                }
+
+                let hour = new Date().getHours();
+                let greetings;
+                if (hour < 12) {
+                    greetings = "Good Morning";
+                } else if (hour <17) {
+                    greetings = "Good Afternoon";
+                } else {
+                    greetings = "Good Evening";
+                }
+
+                let stars = "";
+                let count = 0;
+                while (count < 5) {
+                    stars = stars + "* ";
+                    count = count +1;
+                }
+
+                document.getElementById("name").innerHTML = name;
+                document.getElementById("score").innerHTML = myScore + " out of" + highScore;
+                document.getElementById("record").innerHTML = isTopScore;
+                document.getElementById("stars").innerHTML = stars;
+                document.getElementById("bonus").innerHTML = bonus;
+                document.getElementById("team").innerHTML = team;
+
+                
+                
+            }
+        </script>
+    </body>
+</html>
