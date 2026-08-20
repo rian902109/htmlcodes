@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+             body{
+               font-family: Arial, Helvetica, sans-serif; 
+               background-color: red;
+               background:linear-gradient(to bottom, rgb(11, 4, 37),rgb(24, 15, 91),rgb(49, 35, 119));
+               background-repeat: no-repeat;
+               padding: 30px;
+               text-align: center;
+            }
+
+            h1{color: gold;}
+            h1 +p{
+                background: linear-gradient(to top,white,yellow,gold);
+                padding: 10px 20px ;
+                border-radius: 8px;
+                color: #0cbfb9;
+                display: inline-block;
+            }    
+
+        </style>
+    </head>
+    <body>
+        <h1>My Planet Cards</h1>
+        <p>Use java script cards to build to build planet cards</p>
+        <button onclick="showPlanets()">Show Planets</button>
+        <div class="cards">
+            <div id="card1"></div>
+            <div id="card2"></div>
+            <div id="card3"></div>
+        </div>
+        <script>
+            class planets{
+                constructor(name ,facts) {
+                    this.name=name;
+                    this.facts=facts;
+                }
+                describe(){
+                    return;  ":" +this.facts;
+                }
+            }
+            function showPlanets() {
+                let planet1 = new planets("Earth","the only planet with life");
+                let planet2 = new planets("Mars","known as the red planet ");
+                let planet3 = new planets("Saturn","has rings made of ice");
+                document.getElementById("card1").innerHTML =planet1.name + planet1.facts;
+                document.getElementById("card2").innerHTML =planet2.name + planet2.facts;
+                document.getElementById("card3").innerHTML =planet3.name + planet3.facts;
+            }
+        </script>
+    </body>
+</html>
