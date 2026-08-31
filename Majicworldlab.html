@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>My Magic World</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div class="container py-4">
+            <h1 class="mb-1">My Magic World</h1>
+            <p class="text-muted mb-4" >
+                discover types, switch them, find and swap words, and catch sneaky errors!
+            </p>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">What Type Is It?</h3>
+                    <button class="btn btn-warning" onclick="checktypes()">
+                        reveal the types
+                    </button>
+                    <div id="typeResult" class="box p-3 mt-3 rounded">
+                        press the button to reveal the secret types!
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Switch the Type</h3>
+                    <input id="numIn" class="form-control mb-2" placeholder="Type any number here (try: 42)"/>
+                    <button class="btn btn-warning mr-2" onclick="toStr()">
+                       turn into text
+                    </button>
+                    <button class="btn btn-warning " onclick="toNum()">
+                       turn into numbers
+                    </button>
+                    <div id="convResult" class="box p-3 mt-3 rounded">
+                       Type a number above then press a button!
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Find and Swap a word</h3>
+                    <input id="findW" class="form-control mb-2" placeholder="word to find (try: dragon)"/>
+                    <input id="swapW" class="form-control mb-2" placeholder="swap it with (try: wizard)"/>
+                    <button class="btn btn-warning mr-2" onclick="doSearch()">
+                      swap it
+                    </button>
+                    <button class="btn btn-warning " onclick="doReplace()">
+                       swap it
+                    </button>
+                    <div id="srResult" class="box p-3 mt-3 rounded">
+                       sentence: "The dragon flew ovea the big castle"
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var sen = "the dragon flew over the big castle.";
+            function checktypes() {
+                document.getElementById("typeResult").innerHTML = "Score 42   -type:" + typeof 42 + typeof "alex" + typeof true;
+            }
+            function toStr() {
+                var v = document.getElementById("numIn").value;
+                document.getElementById("convResults").innerHTML = 
+                "string (" + v +")= '" + string(v);
+            }
+            function toNum() {
+                var v = document.getElementById("numIn").value;
+                document.getElementById("convResults").innerHTML = 
+                "string ("' + v +'")
+            }
+        </script>
+    </body>
+</html>
