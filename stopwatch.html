@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Stop watch</h1>
+        <p><span id="seconds">00</span>: <span id="milliseconds"></span></p>
+        <button   id="buttonstart" class="btn btn-primary">start</button>
+        <button id="buttonstop" class="btn btn-secondary">stop</button>
+        <button id="buttonreset" class="btn btn-warning">reset</button>
+    </div>
+    <script>
+        window.onload = function () {
+            var seconds= 0;
+            var milliseconds= 0;
+            var appendmilliseconds = document.getElementById("milliseconds")
+            var appendseconds = document.getElementById("seconds")
+            var buttonstart = document.getElementById("buttonstart");
+            var buttonstop = document.getElementById("buttonstop");
+            var buttonreset = document.getElementById("buttonreset");
+            var Interval;
+
+            function startTimer(){
+		    milliseconds++;
+
+		    if(milliseconds <= 9){
+     	 	appendmilliseconds.innerHTML = "0" + milliseconds;
+    	    }
+		    if (milliseconds > 9){
+      		appendmilliseconds.innerHTML = milliseconds;
+      	    }
+		    if (milliseconds > 99) {
+			seconds++;
+			appendSeconds.innerHTML = "0" + seconds;
+			milliseconds = 0;
+			appendmilliseconds.innerHTML = "0" + 0;
+		    }
+		    if (seconds > 9){
+      		appendSeconds.innerHTML = seconds;
+            }}
+
+
+            buttonstart.onclick = function( ) {
+                clearInterval(Interval);
+                Interval = setInterval(startTimer, 10)
+            }
+
+            buttonstop.onclick = function( ) {
+                clearInterval(Interval);
+                
+            }
+            buttonstart.onclick = function( ) {
+                clearInterval(Interval);
+                milliseconds = "00";
+                seconds= "00";
+                appendmilliseconds.innerHTML = milliseconds;
+                appendseconds.innerHTML = seconds
+            }
+        }
+    </script>
+</body>
+</html>
