@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .body{
+            background:linear-gradient(to bottom, rgb(85, 158, 221), rgb(180, 45, 45), rgb(214, 161, 61));
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        .topnav{
+            overflow: hidden;
+            background-color: blue;
+            background: linear-gradient(to left,black,rgb(10, 10, 57),rgb(64, 57, 166));
+        }
+        .topnav a{
+            float: center;
+            color: #1afff7;
+            text-align: center;
+            padding: 16px 18px;
+            text-decoration: double;
+            font-size: 20px;
+        }
+        .topnav a:hover {
+            background-color: red;
+            background:linear-gradient(to left, rgb(66, 11, 11),red,orange,yellow);
+            color: black
+        }
+        .topnav a.active{
+            background-color: blueviolet;
+            color: white;
+        }
         .footer{
             position: fixed;
             left: 0;
@@ -17,6 +44,18 @@
     </style>
 </head>
 <body>
+    <div class="topnav">
+        <a class="active" href="home">home</a>
+        <a href="#">location</a>
+        <a href="#">opening time</a>
+        <a href="#">items</a>
+        <a href="#">offers</a>
+        <a href="#">activities</a>
+        <a href="#">phone number</a>
+
+
+
+    </div>
     <div class="footer">
         <p>@copy all rights and reserved by swati singh</p>
     </div>
